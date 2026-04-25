@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Logo from "../../assets/logo.png";
-import { compareAsc, format } from "date-fns";
+import { format } from "date-fns";
 
 const HomePage = () => {
   return (
