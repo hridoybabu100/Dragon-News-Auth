@@ -1,26 +1,14 @@
 import LeftSiteBar from "@/components/MainHomePage/LeftSiteBar";
 import RightSiteBar from "@/components/MainHomePage/RightSiteBar";
-import React from "react";
 
-async function getCatagories() {
-  const res = await fetch(
-    "https://openapi.programming-hero.com/api/news/categories",
-  );
-  const data = await res.json();
-  return data.data;
-}
-async function getNews(id) {
-  const res = await fetch(
-    `https://openapi.programming-hero.com/api/news/category/${id}`,
-  );
-  const data = await res.json();
-  return data.data;
-}
 
-const Detailspage = async ({params}) => {
-    const {id} = await params;
-  const catagories = await getCatagories();
-  const news = await getNews(id);
+
+
+const Detailspage = async ({ params }) => {
+  const res = await params;
+  console.log(res);
+  
+  
   return (
     <div className="my-12 w-[85%] mx-auto grid grid-cols-12 gap-6">
       <div className="col-span-3">
